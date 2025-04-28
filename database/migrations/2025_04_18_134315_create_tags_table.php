@@ -17,6 +17,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        // pivot table
         Schema::create('job_tag', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(App\Models\Job::class, 'job_listing_id')->constrained()->cascadeOnDelete();
